@@ -14,15 +14,10 @@ def fastF(n):
     if n == 1:
         return 1
 
-    if n % 2 == 0:
-        a = 1
-        b = 0
-    else:
-        a = 1
-        b = 1
-    n = n / 2
+    a = 1
+    b = 0
 
-    while n != 1:
+    while n > 1:
         if n % 2 == 0:
             a = a + b
         else:
@@ -32,8 +27,8 @@ def fastF(n):
     return a + b
 
 def main():
-    print f(123)
-    print fastF(123)
+    print [f(x) for x in xrange(128)]
+    print [fastF(x) for x in xrange(128)]
 
 
 if __name__ == '__main__':
